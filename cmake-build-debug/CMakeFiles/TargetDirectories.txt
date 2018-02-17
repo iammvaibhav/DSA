@@ -1,4 +1,0 @@
-/home/vaibhav/CLionProjects/DSA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vaibhav/CLionProjects/DSA/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vaibhav/CLionProjects/DSA/cmake-build-debug/CMakeFiles/STRTOK.dir
-/home/vaibhav/CLionProjects/DSA/cmake-build-debug/CMakeFiles/DRIVER.dir
