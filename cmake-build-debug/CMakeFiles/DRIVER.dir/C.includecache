@@ -29,6 +29,10 @@ MergeSort.h
 /home/vaibhav/CLionProjects/DSA/MergeSort.h
 stdlib.h
 -
+Stack.h
+/home/vaibhav/CLionProjects/DSA/Stack.h
+math.h
+-
 
 /home/vaibhav/CLionProjects/DSA/MergeSort.h
 Element.h
@@ -68,7 +72,5 @@ stdio.h
 stdlib.h
 -
 time.h
--
-unistd.h
 -
 

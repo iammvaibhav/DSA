@@ -5,14 +5,17 @@
 #include <stddef.h>
 #include "MergeSort.h"
 #include <stdlib.h>
+#include "Stack.h"
+#include <math.h>
 
 Element* mergeSortInternalRecursive(Element* arr, int low, int high, Element* tempArr);
+Element* mergeSortInternalIterative(Element* arr, int low, int high, Element* tempArr);
 void merge(Element* arr, int low, int mid, int high, Element* tempArr);
 
 Element* mergeSort(Element* arr, int size, int option) {
     Element* tempArr = (Element*) malloc(sizeof(Element) * size);
     if (option == 0) return mergeSortInternalRecursive(arr, 0, size - 1, tempArr);
-    else return NULL;
+    else return mergeSortInternalIterative(arr, 0, size - 1, tempArr);
 }
 
 Element* mergeSortInternalRecursive(Element* arr, int low, int high, Element* tempArr) {
@@ -22,6 +25,24 @@ Element* mergeSortInternalRecursive(Element* arr, int low, int high, Element* te
         mergeSortInternalRecursive(arr, mid + 1, high, tempArr);
         merge(arr, low, mid, high, tempArr);
     }
+    return arr;
+}
+
+Element* mergeSortInternalIterative(Element* arr, int low, int high, Element* tempArr) {
+
+    int currSize = 1;
+    int currmid, currhigh;
+
+    while (currSize < high + 1) {
+        for (int i = 0; i <= high; i += currSize*2 ) {
+            currmid = i + currSize - 1;
+            currhigh = (i + 2*currSize - 1 > high) ? high : i + 2*currSize - 1;
+            if (currmid < high)
+                merge(arr, i, currmid, currhigh, tempArr);
+        }
+        currSize *= 2;
+    }
+
 }
 
 void merge(Element* arr, int low, int mid, int high, Element* tempArr) {

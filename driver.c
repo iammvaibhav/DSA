@@ -23,10 +23,10 @@ int main() {
 
 	//fill the contents of arr
 	int i;
-    int size = 1000000000;
+    int size = 10;
     Element* arr = malloc(size * sizeof(Element));
 	for(i = 0; i < size; i++)
-		arr[i].data = rand();
+		arr[i].data = 10-i;
 
     struct timespec initial;
     struct timespec afterInsertion;
@@ -34,7 +34,7 @@ int main() {
     struct timespec afterQuickI;
     struct timespec final;
     struct timespec diff;
-    //printElementArr(arr, size);
+    printElementArr(arr, size);
     printf("\t\t\t\tREPORT For Size n = %d\n", size);
 
     /*clock_gettime(CLOCK_MONOTONIC, &initial);
@@ -47,7 +47,7 @@ int main() {
         arr[i].data = rand();
 */
 
-    clock_gettime(CLOCK_MONOTONIC, &afterInsertion);
+    /*clock_gettime(CLOCK_MONOTONIC, &afterInsertion);
 	quickSort(arr, size, -1, 0);
     clock_gettime(CLOCK_MONOTONIC, &afterQuickR);
     timespec_diff(&afterInsertion, &afterQuickR, &diff);
@@ -63,13 +63,15 @@ int main() {
     printf("%-30s %ds %fms\n", "Iterative Quick Sort took", diff.tv_sec, diff.tv_nsec/1000000.0);
 
     for(i = 0; i < size; i++)
-        arr[i].data = rand();
+        arr[i].data = rand();*/
 
     clock_gettime(CLOCK_MONOTONIC, &afterQuickI);
-    mergeSort(arr, size, 0);
+    mergeSort(arr, size, 1);
     clock_gettime(CLOCK_MONOTONIC, &final);
+    printElementArr(arr, size);
     timespec_diff(&afterQuickI, &final, &diff);
     printf("%-30s %ds %fms\n", "Merge Sort took", diff.tv_sec, diff.tv_nsec/1000000.0);
+
 	return 0;
 }
 

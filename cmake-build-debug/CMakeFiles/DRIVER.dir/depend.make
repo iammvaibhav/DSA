@@ -11,6 +11,7 @@ CMakeFiles/DRIVER.dir/InsertionSort.c.o: ../InsertionSort.h
 CMakeFiles/DRIVER.dir/MergeSort.c.o: ../Element.h
 CMakeFiles/DRIVER.dir/MergeSort.c.o: ../MergeSort.c
 CMakeFiles/DRIVER.dir/MergeSort.c.o: ../MergeSort.h
+CMakeFiles/DRIVER.dir/MergeSort.c.o: ../Stack.h
 
 CMakeFiles/DRIVER.dir/QuickSort.c.o: ../Element.h
 CMakeFiles/DRIVER.dir/QuickSort.c.o: ../InsertionSort.h
