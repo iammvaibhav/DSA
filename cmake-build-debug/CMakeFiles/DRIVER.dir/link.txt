@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/DRIVER.dir/driver.c.o CMakeFiles/DRIVER.dir/InsertionSort.c.o CMakeFiles/DRIVER.dir/Element.c.o CMakeFiles/DRIVER.dir/QuickSort.c.o CMakeFiles/DRIVER.dir/Stack.c.o CMakeFiles/DRIVER.dir/MergeSort.c.o  -o DRIVER 

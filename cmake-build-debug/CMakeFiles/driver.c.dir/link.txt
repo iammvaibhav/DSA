@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/driver.c.dir/InsertionSort.c.o CMakeFiles/driver.c.dir/QuickSort.c.o  -o driver.c 
